@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/add.css">
+    <title>选择任务</title>
+</head>
+<body>
+    <div class="header">
+        <div class="h-cont">
+            <div class="h-c-left"><a href="goal.html"><img src="./imgs/xiangzuo.png" alt=""></a></div>
+            <div class="h-c-title">新建目标</div>
+            <div class="h-c-right">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li class="nav-item action">运动</li>
+                <li class="nav-item">学习</li>
+                <li class="nav-item">健康</li>
+                <li class="nav-item">生活</li>
+            </ul>
+        </div>
+        <div class="tab" id="tabTol">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-cont">
+            <a href="goal.html">
+            <!-- <img src="./imgs/tianjia.png" alt=""> -->
+                <span>取消</span>
+            </a>
+        </div>
+    </div>
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script>
+        // $(".tab-cont").eq($(".tab-cont").index()).show().siblings().hide();
+        $('.nav-item').click(function(){
+            $(this).addClass("action").siblings().removeClass("action");
+            $(".tab-cont").eq($(this).index()).show().siblings().hide();
+        })
+        var db=[[
+            {title:"跑步",num:2847294,img:"./imgs/paobu.png"},
+            {title:"深蹲",num:4586231,img:"./imgs/shendun.png"},
+            {title:"健身操",num:865242,img:"./imgs/jianshencao.png"},
+            {title:"篮球",num:8855521,img:"./imgs/lanqiu.png"},
+            {title:"瑜伽",num:5214685,img:"./imgs/tiaowu.png"},
+            {title:"足球",num:425358,img:"./imgs/zuqiu.png"},
+            {title:"跳舞",num:884532,img:"./imgs/tiaowu.png"},
+            {title:"羽毛球",num:7261544,img:"./imgs/yumaoqiu.png"},
+            {title:"滑板",num:563189,img:"./imgs/huaban.png"}
+        ],[
+            {title:"阅读",num:2847294,img:"./imgs/yuedu.png"},
+            {title:"练字",num:4586231,img:"./imgs/lianzi.png"},
+            {title:"复习/考试",num:865242,img:"./imgs/fuxi.png"},
+            {title:"学英语",num:8855521,img:"./imgs/xueyingyu.png"},
+            {title:"写作",num:5214685,img:"./imgs/xiezuo.png"},
+            {title:"绘画",num:425358,img:"./imgs/huihua.png"},
+            {title:"学吉他",num:884532,img:"./imgs/xuejita.png"},
+            {title:"线上课",num:7261544,img:"./imgs/xianshangke.png"},
+            {title:"摄影",num:563189,img:"./imgs/sheying.png"}
+        ],[
+            {title:"早睡",num:2847294,img:"./imgs/zaoshui.png"},
+            {title:"喝水",num:4586231,img:"./imgs/heshui.png"},
+            {title:"早起",num:865242,img:"./imgs/zaoqix.png"},
+            {title:"吃早餐",num:563189,img:"./imgs/chizaocan.png"},
+            {title:"减肥",num:8855521,img:"./imgs/jianfei.png"},
+            {title:"无糖",num:5214685,img:"./imgs/wutang.png"},
+            {title:"刷牙",num:425358,img:"./imgs/shuaya.png"},
+            {title:"护眼",num:884532,img:"./imgs/huyan.png"},
+            {title:"冥想",num:7261544,img:"./imgs/mingxiang.png"}
+        ],[
+            {title:"攒钱",num:2847294,img:"./imgs/zanqian.png"},
+            {title:"情绪管理",num:4586231,img:"./imgs/qingxuguanli.png"},
+            {title:"护肤",num:865242,img:"./imgs/hufu.png"},
+            {title:"记收账",num:8855521,img:"./imgs/jizhang.png"},
+            {title:"一日三餐",num:5214685,img:"./imgs/yirisancan.png"},
+            {title:"树洞",num:425358,img:"./imgs/shudong.png"},
+            {title:"日记",num:884532,img:"./imgs/riji.png"},
+            {title:"每日收纳",num:7261544,img:"./imgs/shouna.png"},
+            {title:"电影",num:563189,img:"./imgs/dianying.png"}
+        ]]
+        for(var i in db){
+            if(i==0){
+                tabTol.innerHTML+=`<div class="tab-cont"></div>`;
+            }else{
+                tabTol.innerHTML+=`<div class="tab-cont" style="display:none"></div>`;
+            }
+            html=""
+            for(var p of db[i]){
+                html+=`<div class="tab-item">
+                    <a href="add.html?title=${p.title}&img=${p.img}&del=0">
+                        <div class="tab-title">${p.title}</div>
+                        <p>${p.num}人已加入</p>
+                        <div><img src="${p.img}" alt=""></div>
+                    </a>
+                </div>`;
+            }
+            $('.tab-cont:last-child').html(html);
+        }
+    </script>
+    <script>
+        reset();
+        window.addEventListener("resize",reset);
+        function reset(){
+            var html=document.getElementsByTagName('html')[0];
+            var width=html.getBoundingClientRect().width;
+            html.style.fontSize=width/50+"px";
+        }
+    </script>
+</body>
+</html>

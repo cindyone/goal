@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/goal.css">
+</head>
+<body>
+    <div class="allContainer">
+        <div class="top-div">
+            <div class="top-container">
+                <div class="catalogue">
+                    <img src="./imgs/menu.png" alt="">
+                </div>
+                <p class="text-goal">今日目标</p>
+                <div class="append">
+                    <a href="addgoal.html"><img src="./imgs/tianjia.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="goals-container">
+            <ul class="goals-ul"></ul>
+        </div>
+
+        <div class="foot">
+            <div class="foot-container">
+                <ul class="foot-ul">
+                    <li class="foot-li">
+                        <a href="goal.html"><img src="./imgs/mubiao.png" alt=""></a>
+                    </li>
+                    <li class="foot-li">
+                        <a href="calculagraph.html"><img src="./imgs/daojishi.png" alt=""></a>
+                    </li>
+                    <li class="foot-li">
+                        <a href="mygoal.html"><img src="./imgs/wode.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="shade-finish" data-a1="" data-a2="">
+        <div class="judge">
+            <div class="judge-container">
+                <h4>是否完成打卡</h4>
+                <p>
+                    <input type="button" value="打卡" class="btn-left click_card">
+                    <input type="button" value="再想想" class="btn-right noclick_card">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="shade-cancel" data-a1="" data-a2="">
+        <div class="judge">
+            <div class="judge-container">
+                <h4>是否取消打卡</h4> 
+                <p>
+                    <input type="button" value="取消" class="btn-left cancel_click">
+                    <input type="button" value="再想想" class="btn-right nocancel_click">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="record">
+        <div class="record-container">
+            <div class="record-top">
+                <h2>任务进度</h2>
+            </div>
+            <div class="record-body">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div class="outclick"></div>
+    </div>
+
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/goal.js"></script>
+    
+</body>
+</html>

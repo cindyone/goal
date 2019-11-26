@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计时器</title>
+    <link rel="stylesheet" href="./css/calculagraph.css">
+</head>
+
+<body>
+
+    <div class="cHeader">
+        <span>任务计时器</span>
+    </div>
+
+    <div class="cBody">
+        <div class="circle">
+            <div class="circleTime">
+                <ul class="choseMinutes"></ul>
+                <span class="minutes">25</span>
+                <span class="point">:</span>
+                <span class="seconds">00</span>
+            </div>
+        </div>
+        <div class="addBtn">
+            <span class="add">＋</span>
+            添加计时目标
+        </div>
+        <div class="now">
+            <span class="now_ico">
+                <img src="" alt="" width="100%" height="100%" id="now_ico_img">
+            </span>
+            <span id="now_ico_title"></span>
+        </div>
+        <button class="start">开始</button>
+        <button class="stop">暂停</button>
+        <div class="conEnd">
+            <div class="end"><span>结束</span></div>
+            <div class="con"><span>继续</span></div>
+        </div>
+    </div>
+
+    <div class="shadow"></div>
+
+    <div class="aim aim_fade">
+        <div class="aimHeader">
+            <span class="aim_cho">选择计时的目标</span>
+            <span class="aim_cancel">取消</span>
+        </div>
+        <div class="aim_hr"></div>
+        <div id="choosegoal"></div>
+    </div>
+
+    <div class="foot">
+        <div class="foot-container">
+            <ul class="foot-ul">
+                <li class="foot-li">
+                    <a href="goal.html"><img src="./imgs/mubiao.png" alt=""></a>
+                </li>
+                <li class="foot-li">
+                    <a href="calculagraph.html"><img src="./imgs/daojishi.png" alt=""></a>
+                </li>
+                <li class="foot-li">
+                    <a href="mygoal.html"><img src="./imgs/wode.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="./js/jquery-1.11.3.js"></script>
+<script src="./js/calculgraph.js"></script>
+</html>

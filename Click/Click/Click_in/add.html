@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+  <title>编辑任务</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./css/mobileSelect.css">
+  <link rel="stylesheet" href="./css/lCalendar.css">
+  <link rel="stylesheet" href="./css/honeySwitch.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部区域 -->
+    <header>
+      <div class="top_fixed">
+        <a class="iconfont icon-arrow-left" href="addgoal.html"></a>
+        <span>添加新任务</span>
+      </div>
+      <div class="item_icon">
+        <!-- <span class="iconfont icon-paobu1"></span> -->
+        <img class="add_img" alt=""><!-- 修改图片,图片数据传递 LHL-->
+        <div class="item_icon_edit">
+          <span class="iconfont icon-icon_bianji"></span>
+        </div>
+      </div>
+    </header>
+    <section>
+      <input class="item_edit" placeholder="请输入目标名称" type="text">
+      <!-- 选择开始日期 -->
+      <div class="start_time">
+        <span class="font_title">开始日期</span>
+        <span id="time_select1">请选择
+          <i class="iconfont icon-youjiantou"></i>
+        </span>
+      </div>
+      <div class="line"></div>
+      <div id="dataStart" style="display:none"></div>
+      <!-- 选择结束日期 -->
+      <div class="end_time">
+        <span class="font_title">结束日期</span>
+        <span id="time_select2">请选择
+          <i class="iconfont icon-youjiantou"></i>
+        </span>
+      </div>
+      <div class="line"></div>
+      <div id="dataEnd" style="display:none"></div>
+      <!-- 每周打卡 -->
+      <div class="week">
+        <p class="font_title">每周打卡</p>
+        <ul class="week_select">
+          <li>周一</li>
+          <li>周二</li>
+          <li>周三</li>
+          <li>周四</li>
+          <li>周五</li>
+          <li>周六</li>
+          <li>周日</li>
+        </ul>
+      </div>
+      <div class="line"></div>
+      <div class="alarm">
+        <p class="font_title">提醒时间</p>
+        <div class="alarm_con">
+          <div class="alarm_add">+</div>
+          <div>
+            <input id="demo3" class="alarm_time" type="text" readonly="" name="input_date" placeholder="14:00:00" />
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="card">
+        <span class="font_title">打卡时间</span>
+        <span id="card_time">
+          <input id="demo2" type="text" readonly="" name="input_date" placeholder="00:00:00" />
+          <span>-</span>
+          <input id="demo1" type="text" readonly="" name="input_date" placeholder="23:59:00" />
+          <i class="iconfont icon-youjiantou"></i>
+        </span>
+      </div>
+      <div class="line"></div>
+      <div class="card_success">
+        <span class="font_title">打卡成功提醒</span>
+        <span class="switch-on" id="card_success_switch" themeColor="gold"></span>
+      </div>
+      <div class="line"></div>
+    </section>
+    <footer>
+      <!-- <a href="goal.html"><button id="success_btn" class="ok">完成</button></a>
+      
+      <a href="goal.html"><button id="updata_btn" class="updata" style="display: none">更新目标</button></a>
+      <a href="goal.html"><button id="del_btn" class="del" style="display: none">删除目标</button></a>
+       -->
+      <a href="goal.html" id="success_btn" class="ok">完成</a>
+      <!-- 、 -->
+      <a href="goal.html" id="updata_btn" class="updata" style="display: none">更新目标</a>
+      <a href="goal.html" id="del_btn" class="del" style="display: none">删除目标</a>
+    </footer>
+  </div>
+</body>
+<script src="./js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="./js/selectDate.js"></script>
+<script type="text/javascript" src="./js/mobileSelect.js"></script>
+<script src="./js/lCalendar.js"></script>
+<script src="./js/honeySwitch.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/add.js"></script>
+<script>
+  reset();
+  window.addEventListener("resize", reset);
+  function reset() {
+    var html = document.getElementsByTagName('html')[0];
+    var hWidth = html.getBoundingClientRect().width;
+    html.style.fontSize = hWidth / 15 + "px";
+  }
+</script>
+</html>

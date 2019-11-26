@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="./css/register.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<link rel="shortcut icon" href="#" />
+</head>
+<body>
+	<div class="register">
+		<div class="overall">
+			<header class="header">
+				<span class="arrow"> 
+					<a href="./login.html"><i class="ico1"></i></a>
+				</span>
+				<div class="title">
+					<div class="title-name">注册</div>
+				</div>
+			</header>
+			<div class="content">
+				<div class="text">
+					<div class="from-conter">
+						<label class="conter-laber">用户名</label>
+						<div class="content-container">
+							<input type="text" name="" placeholder="请输入用户名" id="uname" AUTOCOMPLETE="off">
+							<span class="check1">4-8位字母</span>
+							<span class="check2">用户名已存在</span>
+						</div>
+					</div>
+					
+				  	<div class="from-conter">
+						<label class="conter-laber">密码</label>
+						<div class="content-container">
+							<input type="password" name="" placeholder="请输入密码" id="upwd">
+							<span class="check3">6-10位数字或字母</span>
+						</div>
+					</div>
+					<div class="from-conter">
+						<label class="conter-laber">年龄</label>
+						<div class="content-container">
+							<input type="text" name="" placeholder="请输入年龄" id="age" AUTOCOMPLETE="off">
+							<span class="check4">1-3位数字</span>
+						</div>
+					</div>
+					<div class="from-conter">
+						<label class="conter-laber">手机号</label>
+						<div class="content-container">
+							<input type="number" name="" placeholder="请输入手机号" id="phoneNumber" AUTOCOMPLETE="off">
+							<span class="check5">手机号不正确</span>
+						</div>
+					</div>
+					<div class="from-conter">
+						<label class="conter-laber">性别</label>
+						<select class="contents" id="sex">
+							<option>选择</option>
+							<option>男</option>
+							<option>女</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="button">
+				<a href="login.html"><input type="submit" name="" value="注册" class="btn"></a>
+			</div>
+			<div class="char">
+				<span>注册即同意去哪儿</span>
+				<span><a href="#">用户服务协议</a></span>
+				<span>和</span>
+				<span><a href="#">隐私政策</a></span>
+			</div>
+			<div class="footer">
+				<div class="select">
+					<span><a href="#">电脑</a></span>
+					<span><a href="#">关于我们</a></span>
+				</div>
+				<div class="footers">
+					<span> Qunar 京ICP备05021087</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery-1.11.3.js"></script>
+	<script src="./js/register.js"></script>
+</body>
+</html>

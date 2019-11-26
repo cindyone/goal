@@ -1,0 +1,241 @@
+body{
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  margin: 0;
+  padding:0 0.2rem 0.2rem;
+}
+ul{
+  list-style-type: none;
+  margin: 0.6rem 0;
+  padding: 0;
+}
+.yellow{
+  background: rgb(248, 212, 85)
+}
+.font_title{
+  font-size: 0.7rem;
+  font-weight:600;
+  margin: 0;
+  padding: 0;
+}
+/* 改变input的默认值 */
+input{
+  border:0;
+  outline: none;
+}
+
+.start_time,.end_time,.card,.card_success{
+  width: 14rem;
+  height: 1.7rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;   
+  margin: 0.4rem 0.2rem;
+}
+/* 分割线 */
+.line{
+  height: 0.05rem;
+  width: 14rem;
+  padding: 0;
+  background-color: rgb(244, 247, 248);  
+}
+/* 头部区域 */
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.top_fixed{
+  width:14rem;
+  height:1.7rem;
+  display: flex;
+  justify-content:space-between; 
+  align-items:center;
+  font-size: 0.8rem;
+  font-weight:700;
+}
+.top_fixed span:last-child{
+  flex:1;
+}
+.top_fixed a{
+  text-decoration: none;
+  flex:0.6; 
+}
+
+.item_icon{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgb(244, 247, 248);  
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative; 
+}
+.add_img{
+  width: 100%;
+  height: 100%;
+}
+.item_icon>span{
+  font-size:1.8rem;
+  color: rgb(238, 153, 145); 
+}
+/* 选择开始日期和结束日期 */
+.item_icon_edit{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  position: absolute;
+  bottom:0;
+  right: 0;
+}
+.item_icon_edit>span{
+  font-size: 0.6rem;
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  flex-direction: column;
+}
+
+.item_edit{
+  padding:0 4rem;
+  width: 6rem;
+  height: 1.7rem;
+  margin-top: 0.5rem;
+  background-color: rgb(244, 247, 248);  
+  border-radius: 0.5rem;
+  font-size:0.7rem;
+  text-align: center;
+}
+
+#time_select1,#time_select2{
+  font-weight:normal;
+  font-size: 0.6rem;
+  color:gray;
+}
+/* 每周打卡 */
+.week{
+  width: 14rem;
+  height: 4rem;
+  margin: 0.7rem 0.2rem 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.week_select{
+  display: flex;
+  flex-direction: row;
+}
+.week_select>li{
+  width: 2rem;
+  height: 1.7rem;
+  font-size: 0.6rem;
+  margin: 0.1rem;
+  border: 0.01rem solid #000;
+  border-radius: 50%;
+  font-weight:400;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+/* 提醒时间 */
+.alarm{
+  width: 14rem;
+  height: 4.4rem;
+  margin:0.5rem 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm_con{
+  display: flex;
+  flex-direction: row;
+  margin: 0.6rem 0 0.4rem;
+}
+.alarm_add,.alarm_time{
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: rgb(244, 247, 248);
+  margin-right: 0.5rem;
+}
+.alarm_add{
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 100;
+}
+.alarm_time{
+  line-height: 2rem;
+  text-align: center;
+  font-weight: 100;
+  font-size:0.6rem;
+}
+/* 打卡时间 */
+.card_time{
+  color: black;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;   
+}
+#card_time>input{
+  font-size: 0.6rem;
+  height: 1rem;
+  width: 2.5rem;  
+}
+#card_time>span{
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.3rem;
+  margin-left: 0.2rem;
+  color:#808080;
+}
+/* 完成按钮 */
+/* #success_btn{
+  width: 14rem;
+  height: 1.7rem;
+  margin: 0.6rem 0 0.2rem;
+  background-color: rgb(248, 212, 85);
+  border: 0;
+  border-radius: 0.1rem;
+  font-size: 0.7rem;
+} */
+
+
+
+
+footer>a{
+  text-decoration: none;
+}
+.ok,.del,.updata{
+  display: block;
+  text-align: center;
+  width: 14rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  margin: 0.6rem 0 0.2rem;
+  border: 0;
+  border-radius: 0.1rem;
+  font-size: 0.7rem;
+}
+.ok{
+  background-color: rgb(248, 212, 85);
+}
+.updata{
+  border: 1px solid #d04e3e;
+  box-sizing: border-box;
+  color: #d04e3e;
+  background: none;
+}
+.del{
+  background-color: #d04e3e;
+  color: #fff;
+}
